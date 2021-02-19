@@ -16,7 +16,9 @@ const db = knex({
   connection: {
     host : 'postgresql-concentric-39989',
     connectionString: process.env.DATABASE_URL,
-    ssl:true
+  ssl: {
+    rejectUnauthorized: false
+  }
   }
 });
 
