@@ -15,7 +15,7 @@ const handleApiCall = (req, res) => {
 }
 
 
-const handleImage =  (req,res,db)=>{    					//fot the time being we are using 'image' in place of a url
+const handleImage =  (req,res,db)=>{   
 	const { id } = req.body;
 	db('users').where('id','=', id)
 	.increment('entries', 1)
